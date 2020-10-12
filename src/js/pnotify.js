@@ -9,6 +9,6 @@ defaultModules.set(PNotifyFontAwesome5, {});
 // notice('Notice me, senpai!');
 // info('info me, senpai!');
 // success('success me, senpai!');
-export default function foo() {
-  error('Too many matches found! Please enter a more specific query!');
+export default function foo(message) {
+  error(`${message}`);
 }

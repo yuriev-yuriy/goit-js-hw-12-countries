@@ -20,11 +20,12 @@ inputRef.addEventListener('input', debouncedCallback);
 
 function updateCountriesMarkup(data) {
   if (!data.length) {
+    foo('No matches fround. Please specify your query!');
     return;
   } else if (data.length > 1 && data.length < 10) {
     markup = countriesTpl(data);
   } else if (data.length > 10) {
-    foo();
+    foo('Too many matches fround. Please enter a more specific query!');
     return;
   } else {
     markup = singleCountry(data);
